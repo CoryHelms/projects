@@ -1,0 +1,41 @@
+Performance Analytics
+
+For our semester long project, we analyzed the relationship between homeruns hit, batting average, and slugging percentage for the 2019 season. This is the website that we used to extract our data from: https://www.foxsports.com/mlb/stats?season=2019&category=batting&group=1&sort=7&time=0 
+
+It is important to note that these stats are for the regular season for 2019 to factor in all players who did not make the playoffs.
+
+In our first cell, we made a download_data function that gets all of our data from our website. To get every page of data, we made a url string variable that will have a page number inserted using a for loop from 1-26 to get all the pages of the website. We are doing this to have a larger data set to work on in order to have a better data visualization. We are saving all of these pages in a data folder that we can use for later cells in our code. The order of this data is from they players who have hit the most homeruns to the players who have hit the least amount of homeruns.
+
+
+Data Set
+
+In this cell, we are displaying our data. We are getting all of our pages that we downloaded in our Data folder and putting the corresponding values in a list. We realized that some data points for homeruns or batting average are marked with a a hyphen "-". To fix this, we wrote for looks and if statements to change the value of "-" to 0 so that there are an even number of corresponding statistics for each player. Below you can find every player's name, team, their number of homeruns hit, batting average, and slugging percentage.
+
+
+
+Scatter Plots for Homeruns and Batting Average
+
+We had to decide how many at bats would qualify a player for our dataset. Adding this condition, helped us with our problems with skewed data quite a bit. While only having 25 at bats, some of the batting averages in our data set could be pretty skewed, but we felt it captured enough data to interpret while also getting us the most accurate representation from our population. Adding this condition really improved the dataset from the previous cell. One problem that we endured was that we were unsure of what number of at bats we should use to qualify a player for our set. Some pinch hitters can never start a game in a season yet have 50 at bats by the time the season is over. We experimented with 25, 75, and even 200 to ensure that we only had starters. Below is the graph for players batting at least 25 times and 200 times.
+
+Scatter Plot for Homeruns and Slugging Percentage
+
+This next scatterplot displayed a comparison between home runs and slugging percentage. This was one of the more intriguing scatterplots in our opinion because a home run positively correlates for slugging percentage more than any other statistic because a home run is the best result to improve your slugging percentage. Slugging percentage is calculated by the total number of bases that you take on all of your hits combined divided by the number of at bats that you have. We considered a conclusion that the more home runs you hit, the higher your slugging percentage will be. Some players don't hit that many home runs in a season though. They can still have higher slugging percentage than players that hit 30 home runs because they hit a lot of extra base hits yet lack the power to hit the long ball causing them to fall on the bottom right side of our scatterplot.
+
+
+
+Line of Best Fit Graphs
+
+Overall, there is a positive correlation between Homeruns vs. Batting Average and Homeruns vs. Slugging Percentage. One thing to note is there are a lot of outliers for data. There are many players who have a 0 or null average and there are also players who have batted once have a 1.0 average and slug. We made multiple scatter plots to try to fix the outlier data for players who have batted at least 25 and 75 times to get a better understanding of the relationship between homeruns, batting average, and slugging percentage. For our line of best fit, there is a positive correlation between our statistics, however the line is a little bit lower than it should be because of the multiple players with a very low average and slugging percentage. However, the graphs are great visualization for showing the relationships between homeruns, batting average, and slugging percentage because it provides a clear picture for a lot of data.
+
+
+Histogram of Number of Players and Batting Average
+
+We created this histogram to see the average batting average for players who batted over 25 times over the course the season. As expected, after cutting out the outliers we were able to see that most players bat around a .200-.300 average. This was able to show us how incredible players like Christian Yelich are who were able to bat in the top 1% of league in batting averages and number of homeruns. This chart shows the line between over and under .300 batting average and the difference between a star players and good players.
+
+Histogram of Number of Players and Number of At Bats
+
+This histogram showed us how many players were pitcher, pinch hitters, and/or do not play vs. players who play in the field and are relied on by the team to be the best hitters on the team. This allowed us to see that only half of the players who we had researched were fielders who played most games in the season and were dependable hitters. This graph changed the way that we created many of our previous graphs and strongly influenced our decision to make graphs that only graphed players that had batted a certain number of times to cut out outliers.
+
+Conclusions and Insights
+
+Overall, there is a positive correlation between Homeruns vs. Batting Average and Homeruns vs. Slugging Percentage. One important thing we had to consider was there was a lot of outliers in our data. Not every player started and some payers are pinch hitters or pitchers who primarily bunt. So we made multiple scatter plots to try to fix the outlier data for players who have batted at least 25 and 200 times to get a better understanding of the relationship between homeruns, batting average, and slugging percentage. However, we also made graphs of every player as well to compare both of the graphs and their relationships with batting average, homeruns hit, and slugging percentage. We had a positive correlation homeruns hit and batting average, but we had a stronger correlation between homeruns hit and slugging percentage. This makes sense because batting average accounts for the number of times one gets on base while slugging percentage takes in account every kind of hit (single, double, triple, homerun) divided by number of at bats. So the more homeruns one hits, the higher their slugging percentage. Using scatter plots and histograms are a great way to visualize and understand the relationships between homeruns hit, batting average, and slugging percentage, which gave us better insights on how these statistics relate to a players performance in baseball.
