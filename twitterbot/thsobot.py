@@ -50,7 +50,7 @@ def twint():
         os.system(command)
 
         #twint command to scrape twitter account
-        command = "twint -u helmsysays --since '2020-05-04 00:00:00' -o tweets.txt"
+        command = "twint -u username --since '2020-05-04 00:00:00' -o tweets.txt"
         os.system(command)
 
         #opening .txt file to read and compare contents to avoid duplicating tweets
