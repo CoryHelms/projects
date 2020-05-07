@@ -28,10 +28,10 @@ def scraper(url):
 
 def tweetbot(tweet):
         # personal details 
-        consumer_key ="vRJ5QXzfT3leDbgfys4edrjhM"
-        consumer_secret ="JjlYnlnctEVE4rpAuvkY0zyb0vUJehCZeuHZmuvx4XKhC0vdTa"
-        access_token ="109746402-TkmZ71gRtJAAvSo2hAJ1jLonyCVkV1YKiPet1TAS"
-        access_token_secret ="HPgxca9QWezCWAaiuCVrEGYKcm2jgakDonQSUauktMnEX"
+        consumer_key =""
+        consumer_secret =""
+        access_token =""
+        access_token_secret =""
 
         # authentication of consumer key and secret 
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret) 
