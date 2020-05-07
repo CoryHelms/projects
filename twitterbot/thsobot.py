@@ -2,7 +2,7 @@ import urllib.request, ssl, re, os
 import tweepy
 
 def scraper(url):
-        #for Mac
+        #for Mac w/certificate workaround
         context = ssl._create_unverified_context()
         web_page = urllib.request.urlopen (url, context=context)
         contents = web_page.read().decode(errors="replace")
@@ -11,7 +11,7 @@ def scraper(url):
         #scraping donor names
         donors = re.findall('(?<=<h6 class="mb-0">).+?(?=</h6>)',contents)
 
-        #scraping timestamp for donation
+        #scraping donation timestamp
         donation_date = re.findall('(?<=datetime=").+?(?=T)',contents)
 
         #setting empty variable
