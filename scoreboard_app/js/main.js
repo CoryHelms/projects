@@ -7,8 +7,6 @@ var awayTeamName = document.querySelector("#away_name");
 var lastMatchGoals = document.querySelector("#score");
 var matchTable = document.querySelector("#match_table");
 
-var matchTable = document.querySelector("#match_table");
-
 //function for building match tiles and UI
 function addMatchTile(){
     //create match tile div
@@ -35,11 +33,11 @@ function addMatchTile(){
     awayTileLogo.src = data['teams']['away']['logo'];
     awayTileName.innerHTML = data['teams']['away']['name'];
 
-    homeTeam.appendChild(homeTeamLogo);
-    homeTeam.appendChild(homeTeamName);
+    homeTeam.appendChild(homeTileLogo);
+    homeTeam.appendChild(homeTileName);
 
-    awayTeam.appendChild(awayTeamLogo);
-    awayTeam.appendChild(awayTeamLogo);
+    awayTeam.appendChild(awayTileLogo);
+    awayTeam.appendChild(awayTileName);
 
     var score = document.createElement('p');
     score.innerHTML = data['goals']['home'] + "  :  " + data['goals']['away'];
@@ -48,6 +46,9 @@ function addMatchTile(){
     MatchTile.appendChild(homeTeam);
     MatchTile.appendChild(score);
     MatchTile.appendChild(awayTeam);
+
+    //append info for scores to the match table
+    matchTable.appendChild(matchTile);
 }
 
 //fetching function
@@ -77,6 +78,11 @@ function getData(){
         awayTeamName.innerHTML = teams['away']['name'];
         lastMatchGoals.innerHTML = goals['home'] + "  :  " + goals['away'];
 
+
+        //loop through response data and put on page
+        for(var i = 1; i<matchesList.length(); i++){
+            addMatchTile(matchesList[i]);
+        }
     }))
     .catch(err =>{
         console.log(err);
