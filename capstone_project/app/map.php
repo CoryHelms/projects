@@ -10,8 +10,8 @@ require '../server/googleLogin/google-api/vendor/autoload.php';
 
 //Add Google API Keys
 $clientConnection = new Google_Client();
-$clientConnection->setClientId('261718937372-8cqr2ufaliv8adv4ce7j3r44cb20psgo.apps.googleusercontent.com');
-$clientConnection->setClientSecret('jgzmIiW_RE2SRWAKbwhsl2MD');
+$clientConnection->setClientId('#');
+$clientConnection->setClientSecret('#');
 
 //Set redirect Uri
 $clientConnection->setRedirectUri('https://cgi.luddy.indiana.edu/~team55/server/googleLogin/login.php');
@@ -199,7 +199,7 @@ else:
 
         <!-- Javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByl056S3O9LHpda09_mjzbjTubQFCuo0Q&callback=init&sensor=false"></script>
+        <script type="text/javascript" src="#"></script>
         <script>
             function makeRequest(url, callback) {
                 var request;
